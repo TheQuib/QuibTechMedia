@@ -1,48 +1,39 @@
 ---
-import '~/assets/styles/tailwind.css';
-
-import { I18N } from "~/utils/config";
-
-import CommonMeta from '~/components/common/CommonMeta.astro';
-import Favicons from '~/components/Favicons.astro';
-import CustomStyles from "~/components/CustomStyles.astro"
-import ApplyColorMode from "~/components/common/ApplyColorMode.astro"
-import Metadata from '~/components/common/Metadata.astro';
-import SiteVerification  from "~/components/common/SiteVerification.astro"
-import Analytics  from "~/components/common/Analytics.astro"
-import BasicScripts from '~/components/common/BasicScripts.astro';
-
-import type { MetaData as MetaDataType } from '~/types';
+import "@fontsource/inter";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import "@fontsource/inter/900.css";
 
 export interface Props {
-  metadata?: MetaDataType;
+  title: string;
 }
 
-const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang={language} dir={textDirection} class="2xl:text-[20px]">
-
+<html lang="en">
   <head>
-    <CommonMeta />
-    <Favicons />
-    <CustomStyles />
-    <ApplyColorMode />
-    <Metadata {...metadata} />
-    <SiteVerification />
-    <Analytics />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Dark themed website template built on AstroJS, designed for technological startup business."
+    />
+    <title>{title}</title>
   </head>
-
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body>
     <slot />
-
-    <BasicScripts />
-
     <style is:global>
-      img {
-        content-visibility: auto;
+      html {
+        font-family: Inter;
+        background-color: #26272b;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
       }
     </style>
   </body>
