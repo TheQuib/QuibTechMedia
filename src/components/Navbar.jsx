@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-import { TailcastLogo } from "../assets/logos/TailcastLogo";
-import { GithubIcon } from "../assets/icons/GithubIcon";
 import { QuibTechIcon } from "../assets/icons/QuibTechIcon";
+import { QuibTechLogo } from "../assets/icons/QuibTechLogo"
 
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
@@ -68,7 +66,7 @@ export const Navbar = () => {
               target="_blank"
               aria-label="source code"
             >
-              <QuibTechIcon />
+              <QuibTechLogo />
               <span className="pt-px">&nbsp;&nbsp;QuibTech</span>
             </a>
           </div>
@@ -113,7 +111,7 @@ export const Navbar = () => {
                 href="https://quibtech.com"
                 target="_blank"
               >
-                <QuibTechIcon />
+                <QuibTechLogo />
                 &nbsp;&nbsp;&nbsp;QuibTech
               </a>
             </div>
