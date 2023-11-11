@@ -28,7 +28,10 @@ export const Navbar = () => {
                 <QuibTechIcon />
               </div>
               <div className="text-white font-['Comfortaa'] font-bold text-xl">
-                QuibTech Media
+                QuibTech&nbsp;
+              </div>
+              <div className="text-white font-['Comfortaa'] font-regular text-xl">
+                Media
               </div>
             </div>
           </a>
