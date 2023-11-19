@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { FacebookIcon } from "../assets/icons/FacebookIcon";
+import { InstagramIcon } from "../assets/icons/InstagramIcon";
+import { ThreadsIcon } from "../assets/icons/ThreadsIcon";
+import { QuibTechIcon } from "../assets/icons/QuibTechIcon";
+import { XIcon } from "../assets/icons/XIcon";
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.jpg";
 
@@ -32,19 +36,52 @@ export const Hero = () => {
             QuibTech Media
           </div>
         </motion.div>
+        &nbsp;
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            Affordable website creation / design, infographic design and social media management.
+          <div className="w-48 mx-auto lg:mx-0">
+                  <a
+                    className="inline-block w-10  h-10 mr-2 p-2 rounded-xl"
+                    href="https://www.facebook.com/profile.php?id=61553260823271"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    className="inline-block w-10  h-10 mr-2 p-2 rounded-xl"
+                    href="https://www.instagram.com/quibtech/"
+                  >
+                    <InstagramIcon />
+                  </a>
+                  <a
+                    className="inline-block w-10  h-10 mr-2 p-2 rounded-xl"
+                    href="https://threads.net/@quibtech"
+                  >
+                    <ThreadsIcon />
+                  </a>
+                  <a
+                    className="inline-block w-10  h-10 mr-2 p-2 rounded-xl"
+                    href="https://x.com/quibtech"
+                  >
+                    <XIcon />
+                  </a>
           </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
+            Affordable website design, infographic design and social media management.
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
             <div
@@ -64,7 +101,7 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="relative w-screen flex justify-center ">
             <img

@@ -6,7 +6,7 @@ import feature3 from "../assets/images/feature3.jpg";
 import feature4 from "../assets/images/feature4.jpg";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
-export const Features1 = () => {
+export const Features3 = () => {
   return (
     <section
       className="w-full bg-customDarkBg2 mt-20 mb-8 sm:mt-16 sm:mb-16 xl:mt-0  xl:m pt-[2rem]  md:pt-[12vw] lg:pt-0"
@@ -21,12 +21,12 @@ export const Features1 = () => {
         <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-              <span className="custom-block-subtitle">Web</span>
+              <span className="custom-block-subtitle">Social Media</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-                Website design / management
+                Social media management
               </h2>
               <p className="mb-10 text-customGrayText leading-loose">
-                Great websites don't have to be expensive. QuibTech Media offers cost-effective pricing for website hosting and design. Tell us what information you want, and it'll be reality.
+                Having social media is easy when you have someone else take care of the management behind it all. A post is just an message away.
               </p>
             </div>
           </div>
