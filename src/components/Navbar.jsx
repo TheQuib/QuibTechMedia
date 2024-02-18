@@ -6,7 +6,7 @@ import { QuibTechLogo } from "../assets/icons/QuibTechLogo"
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
   { label: "Features", href: "#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "#pricing", ariaLabel: "Pricing" },
+  { label: "Plans", href: "#PlanTable", ariaLabel: "Plans" },
   { label: "Feedback", href: "#feedback", ariaLabel: "Feedback" },
 ];
 
