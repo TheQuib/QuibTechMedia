@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const StickyScroll = ({ content }) => {
   const [currentImage, setCurrentImage] = useState(content[0].image);
   const [fadeClass, setFadeClass] = useState('opacity-100');
   const containerRef = useRef();
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const sections = document.querySelectorAll('.scroll-section');
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
@@ -19,14 +19,14 @@ const StickyScroll = ({ content }) => {
         }
       }
     });
-  };
+  }, [currentImage, content]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [currentImage, content]);
+  }, [handleScroll]);
 
   return (
     <div ref={containerRef} className="relative flex">
