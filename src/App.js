@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from './components/Logo';
 import StickyScroll from './components/StickyScroll'; // Ensure this is the correct import path
 import './App.css';
 
@@ -57,11 +56,25 @@ const projects = [
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
-      <header className="flex flex-col justify-center items-center h-screen bg-pastelBlue text-center">
-        <Logo />
-        <p className="mt-4 text-2xl">Professional management of your social media presence and more.</p>
+      <header className="relative flex flex-col justify-center items-center h-screen bg-pastelBlue text-center">
+        <img src="/QuibTechMedia.png" alt="QuibTech Media Logo" className="h-32" />
+        <p className="mt-4 text-2xl">Websites, content creation, and social media management from Quinn Henry</p>
+        <div className="absolute bottom-[-50px] w-full flex justify-center space-x-4 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
+            <h3 className="text-xl font-bold mb-4">Website Creation</h3>
+            <p>Stunning websites with responsive design and modern features.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
+            <h3 className="text-xl font-bold mb-4">Infographics Creation</h3>
+            <p>Professional infographics creation services such as posters.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
+            <h3 className="text-xl font-bold mb-4">Social Media Management</h3>
+            <p>Manage your social media platforms with engaging content and regular updates.</p>
+          </div>
+        </div>
       </header>
-      <main className="py-10 px-4">
+      <main className="pt-28 pb-10 px-4">
         <section className="max-w-6xl mx-auto mb-10">
           <h2 className="text-3xl font-semibold text-center mb-6">Our Services</h2>
           <StickyScroll content={services} />
@@ -168,8 +181,16 @@ function App() {
           </form>
         </section>
       </main>
-      <footer className="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2024 QuibTech Media</p>
+      <footer className="bg-gray-800 text-white flex justify-between items-center p-4">
+        <div className="flex items-center">
+          <p>&copy; 2024 QuibTech Media</p>
+        </div>
+        <div className="flex justify-center">
+          <img src="/logo512.png" alt="QuibTech Media Logo" className="w-16 h-16" />
+        </div>
+        <div className="flex items-center">
+          <p>Built using React.</p>
+        </div>
       </footer>
     </div>
   );
